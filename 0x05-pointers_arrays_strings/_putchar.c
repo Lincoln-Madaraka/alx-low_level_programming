@@ -1,18 +1,13 @@
 #include <unistd.h>
 
 /**
- * _putchar - writes the string str to stdout
- * @str: string to print
- * Return: void
+ * _putchar - writes the character c to stdout
+ * @c: character to print
+ * Return: on success 1
+ * On errr -1 returned, errno st appropriately
  */
 
-int _putchar(char str)
+int _putchar(char c)
 {
-    if (str == NULL)
-        return 0;
-
-    for (int i = 0; str[i] != '\0'; i++)
-       _ putchar(str[i]);
-
-   _putchar('\n');
+	return (write(1, &c, 1));
 }
